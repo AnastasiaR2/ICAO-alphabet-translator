@@ -1,26 +1,41 @@
 
   let numbers = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Niner'];
 
-  let alphabet = [
-    {K: 'Kilo'},
-    {L: 'Lima'}
-  ];
+  let alphabet ={
+    A: 'Alpha',
+    B: 'Bravo',
+    C: 'Charlie',
+    D: 'Delta',
+    E: 'Echo',
+    F: 'Foxtrot',
+    G: 'Golf',
+    H: 'Hotel',
+    I: 'India',
+    J: 'Juliett',
+    K: 'Kilo',
+    L: 'Lima',
+    M: 'Mike',
+    N: 'November',
+    O: 'Oscar',
+    P: 'Papa',
+    Q: 'Quebec',
+    R: 'Romeo',
+    S: 'Sierra',
+    T: 'Tango',
+    U: 'Uniform',
+    V: 'Victor',
+    W: 'Whiskey',
+    X: 'X-ray',
+    Y: 'Yankee',
+    Z: 'Zulu'
+  };
 
-  console.log(alphabet);
+  let combination = prompt('Введите комбинацию:');
 
-  console.log(numbers);
-  
-  let combination = 'KL1386';
+  console.log(`Ваша комбинация: ${combination}`);
 
   let arr = [...combination.toUpperCase()];
 
-  console.log(arr);
+  arr = arr.map( (item) => alphabet[item] || numbers[+item] ).join(' ');
 
-  arr[2] = numbers[ +arr[2]];
-  arr[3] = numbers[ +arr[3]];
-  arr[4] = numbers[ +arr[4]];
-  arr[5] = numbers[ +arr[5]];
-
-  arr = arr.join(' ');
-
-  console.log(arr);
+  console.log(`Расшифровка: ${arr}`);
