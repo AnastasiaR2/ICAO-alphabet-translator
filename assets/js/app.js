@@ -1,6 +1,4 @@
 
-  let numbers = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Niner'];
-
   let alphabet ={
     A: 'Alpha',
     B: 'Bravo',
@@ -27,7 +25,17 @@
     W: 'Whiskey',
     X: 'X-ray',
     Y: 'Yankee',
-    Z: 'Zulu'
+    Z: 'Zulu',
+    '0': 'Zero',
+    '1': 'One',
+    '2': 'Two',
+    '3': 'Three',
+    '4': 'Four',
+    '5': 'Five',
+    '6': 'Six',
+    '7': 'Seven',
+    '8': 'Eight',
+    '9': 'Niner'
   };
 
   let combination = prompt('Введите комбинацию:');
@@ -36,6 +44,6 @@
 
   let arr = [...combination.toUpperCase()];
 
-  arr = arr.map( (item) => alphabet[item] || numbers[+item] ).join(' ');
+  arr = arr.map( (item) => alphabet[item] ).join(' ');
 
   console.log(`Расшифровка: ${arr}`);
